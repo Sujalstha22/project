@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "A project made while learing from chai and backend course(YOUTUBE)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "JavaScript"
   ],
   "author": "Sujal Shrestha",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.1"
+  }
 }
