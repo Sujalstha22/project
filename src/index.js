@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
-import express from "express";
+import { app } from "./app.js";
 import connectDB from "./Database_connector/index.js";
 
-const app = express();
+
 dotenv.config();
 
 connectDB()
@@ -15,6 +15,9 @@ connectDB()
     console.log("MONGO DB connection failed!!!! ", err);
     process.exit(1);
   });
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
 
 /* 
 ;(async()=>{
